@@ -1,0 +1,169 @@
+#N canvas 85 206 1140 592 10;
+#X obj 1 121 cnv 15 408 200 empty \$0-background empty 5 8 1 12 -233017
+-1 0;
+#X text 109 131 Hi \, my name is;
+#X symbolatom 202 131 13 0 0 0 - - -;
+#X floatatom 172 264 4 1 1000 0 - #0-to_gop_bars #0-from_gop_bars;
+#X obj 46 231 cnv 15 100 60 empty \$0-dummy_text > 20 12 0 14 -233017
+-66577 0;
+#X floatatom 328 264 4 1 1000 0 - #0-to_gop_multi #0-from_gop_multi
+;
+#X text 357 264 times.;
+#X text 15 263 Try change my duration to;
+#X text 201 263 bars and multiply me;
+#X text 28 158 I am dummy module and I do nothing... But wait \, actually
+I can show you essential features of VisualTracker !;
+#X text 399 520 more info: http://code.google.com/p/visualtracker;
+#X text 29 195 Drag my canvas in MODULE_TIMELINE (ctrl+e) to some track
+\, hit PLAY in SEQUENCER_CONTROLS and once cursor hits canvas I do
+;
+#X obj 1 19 cnv 15 410 97 empty empty empty 5 8 1 12 -1 -1 0;
+#X obj 2 20 cnv 15 408 95 empty empty obligatory_code: 5 8 0 10 -262144
+-1 0;
+#X msg 61 49 200;
+#X obj 61 71 s \$0-GOP_SIZE;
+#X obj 149 24 r \$0-CREATIONBANG;
+#X obj 149 71 s \$0-MODULE_FILENAME;
+#X obj 414 18 cnv 15 280 500 empty empty empty 5 8 1 12 -1 -1 0;
+#X obj 415 19 cnv 15 278 498 empty empty storage_abstractions: 5 8
+0 10 -262144 -1 0;
+#X obj 441 457 s \$0-FIT;
+#X obj 442 58 r \$0-GET_TRACK;
+#X obj 441 131 r \$0-GET_POSITION;
+#X obj 441 169 s \$0-SET_POSITION;
+#X obj 442 96 s \$0-SET_TRACK;
+#X obj 441 281 r \$0-from_gop_bars;
+#X obj 441 323 s \$0-to_gop_bars;
+#X obj 441 358 r \$0-from_gop_multi;
+#X obj 441 401 s \$0-to_gop_multi;
+#X obj 0 326 cnv 15 410 91 empty empty empty 5 8 1 12 -1 -1 0;
+#X obj 1 327 cnv 15 408 89 empty empty sends_to_visualtracker_connector
+5 8 0 10 -262144 -1 0;
+#X obj 151 367 s \$0-NAME;
+#X obj 31 367 s \$0-BARS;
+#X obj 273 366 s \$0-MULTI;
+#X obj 273 347 r \$0-from_gop_multi;
+#X obj 31 346 r \$0-from_gop_bars;
+#X obj 0 421 cnv 15 410 97 empty empty empty 5 8 1 12 -1 -1 0;
+#X obj 1 422 cnv 15 408 95 empty empty user_program: 5 8 0 10 -262144
+-1 0;
+#X obj 145 427 r \$0-EXECUTE;
+#N canvas 947 138 372 578 dummy_action 0;
+#X obj 35 62 line;
+#X obj 35 87 div;
+#X obj 35 188 zl slice;
+#X obj 35 142 t b f;
+#X msg 35 316 \; \$1-dummy_text label \$2;
+#X obj 35 265 f \$0;
+#X obj 35 291 pack f s;
+#X obj 35 235 t b a;
+#X obj 35 212 l2s;
+#X obj 35 -105 inlet execute;
+#X obj 125 -105 inlet duration;
+#X obj 220 -106 inlet reset;
+#X obj 65 -17 f;
+#X msg 35 165 > S O M E _ G R E A T _ S T U F F;
+#X msg 66 113 1;
+#X obj 35 114 + 2;
+#X msg 35 -17 16;
+#X msg 220 -80 stop;
+#X obj 35 -54 t b b b;
+#X msg 94 -17 0;
+#X connect 0 0 1 0;
+#X connect 1 0 15 0;
+#X connect 2 0 8 0;
+#X connect 3 0 13 0;
+#X connect 3 1 2 1;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 5 0;
+#X connect 7 1 6 1;
+#X connect 8 0 7 0;
+#X connect 9 0 18 0;
+#X connect 10 0 12 1;
+#X connect 11 0 17 0;
+#X connect 12 0 0 1;
+#X connect 13 0 2 0;
+#X connect 14 0 3 0;
+#X connect 15 0 3 0;
+#X connect 16 0 0 0;
+#X connect 17 0 0 0;
+#X connect 17 0 14 0;
+#X connect 18 0 16 0;
+#X connect 18 1 12 0;
+#X connect 18 2 19 0;
+#X connect 19 0 0 0;
+#X restore 145 495 pd dummy_action;
+#X obj 232 468 r vt_seq_stop;
+#X obj 188 447 r \$0-DURATION;
+#X obj 121 469 r \$0-CREATIONBANG;
+#X obj 112 393 s~ \$0-AUDIO1;
+#X obj 201 393 s~ \$0-AUDIO2;
+#X text 0 -25 This module introduces essential features ONLY. For full
+feature module introducing all available features check vt_template_module.pd
+;
+#X text 87 49 in pixels;
+#X text 257 23 // use instead loadbang;
+#X text -15 192 A;
+#X text -15 202 |;
+#X text -15 230 |;
+#X text -55 216 GOP size;
+#X text -15 242 V;
+#X text 129 295 Open me to learn more;
+#X text 708 314 6th argument is initial symbol \, active only if switch="symbol"
+;
+#X text 709 169 1st argument is module ID (\$0);
+#X text 709 214 3rd argument is actual stored value/symbol loaded as
+corresponding argument of main module (\$1 \, \$2 etc);
+#X text 708 280 5th argument is initial number \, active only if switch="number".
+If switch="symbol" this parameter must be 0;
+#X text 709 190 2nd argument is unique preset number within current
+module;
+#X text 708 243 4th argument is switch (number/symbol/end) of desired
+storage object;
+#X text 708 355 Number of values stored within one module is limited
+to 899 Preset numbers 0 and 900 are reserved for program functions.
+;
+#X text 711 150 Here is syntax:;
+#X text 709 16 Storage abstraction [mstorage] can save and load content
+of any symbolbox or numbox connected by wires or send/receives (don't
+forget add \$0 prefix). Because pd handles symbols and numbers differently
+\, you have to define symbol/number switch in argument of each abstraction.
+;
+#X text 710 84 Saved values are added to module abstraction as arguments
+during creation and then transmited further. Note some reserved names
+such as "bang" don't work as initial symbols. All arguments of module
+created without them equal 0 and are used as initial values.;
+#X text 0 519 Compatibility: VisualTracker 1 BETA 1;
+#X obj 74 94 ../abs/visualtracker_connector \$0;
+#X obj 442 77 ../abs/mstorage \$0 1 \$1 number -2;
+#X obj 441 150 ../abs/mstorage \$0 2 \$2 number 0;
+#X obj 441 226 ../abs/mstorage \$0 3 \$3 symbol 0 Dummian;
+#X obj 441 302 ../abs/mstorage \$0 4 \$4 number 4;
+#X obj 441 380 ../abs/mstorage \$0 5 \$5 number 1;
+#X obj 441 435 ../abs/mstorage \$0 6 \$6 number 2;
+#X msg 149 48 modules/vt_dummy_module;
+#X text 297 47 path/filename;
+#X connect 2 0 31 0;
+#X connect 2 0 68 0;
+#X connect 14 0 15 0;
+#X connect 16 0 72 0;
+#X connect 16 0 14 0;
+#X connect 21 0 66 0;
+#X connect 22 0 67 0;
+#X connect 25 0 69 0;
+#X connect 27 0 70 0;
+#X connect 34 0 33 0;
+#X connect 35 0 32 0;
+#X connect 38 0 39 0;
+#X connect 40 0 39 2;
+#X connect 41 0 39 1;
+#X connect 42 0 39 2;
+#X connect 66 0 24 0;
+#X connect 67 0 23 0;
+#X connect 68 0 2 0;
+#X connect 69 0 26 0;
+#X connect 70 0 28 0;
+#X connect 71 0 20 0;
+#X connect 72 0 17 0;
+#X coords 0 -1 1 1 410 202 2 0 120;

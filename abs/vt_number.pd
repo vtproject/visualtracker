@@ -1,0 +1,11 @@
+#N canvas 237 366 432 259 10;
+#X obj 100 132 outlet;
+#X obj 100 57 inlet;
+#X obj -38 132 s vt_rebuild_sequence;
+#X obj -38 105 bang;
+#X floatatom 100 100 3 0 99 0 - - -;
+#X connect 1 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 4 0 3 0;
+#X coords 0 -1 1 1 20 16 2 100 100;

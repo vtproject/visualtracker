@@ -1,0 +1,56 @@
+#N canvas 0 0 858 491 10;
+#X obj 113 136 bng 20 250 50 0 erzerutjeukdfq WSDFASFHAEHJE vt_bang
+24 10 0 12 -262144 -1 -1;
+#X obj 113 160 bng 20 250 50 0 dghsdhsgh AETGJATEJTEJ vt_toggle 24
+10 0 12 -262144 -1 -1;
+#X obj 437 137 bng 20 250 50 0 ayvdasdvfasgfv AETJAETJAETJATEJ vt_dummy_module
+24 10 0 12 -262144 -1 -1;
+#X obj 217 139 bng 20 250 50 0 adhahjqrjqrj AETJAETJAETJQTEJ vt_audio_track
+24 10 0 12 -262144 -1 -1;
+#X obj 410 221 bng 15 250 50 0 vt_delete_modules empty delete_all_modules+canvases
+17 7 0 10 -262144 -1 -1;
+#X text 435 111 Start here:;
+#X text 111 111 Basic modules:;
+#X text 214 111 Complex modules:;
+#X obj 437 161 bng 20 250 50 0 asdfaqdfaqdgfwqe dhzkghktktu vt_template_module
+24 10 0 12 -262144 -1 -1;
+#X obj 113 184 bng 20 250 50 0 sdhgadfhaedhq AETGJATEJTEJ vt_line 24
+10 0 12 -262144 -1 -1;
+#X text 602 310 [module_name height_of_module_canvas(;
+#X msg 481 310 vt_dummy_module 200;
+#X msg 480 364 vt_template_module 95;
+#X msg 160 362 vt_toggle 95;
+#X msg 160 412 vt_line 95;
+#X msg 162 309 vt_bang 60;
+#X obj 160 433 s vt_launch_module;
+#X msg 309 311 vt_audio_track 95;
+#X obj 480 387 s vt_launch_module;
+#X obj 309 332 s vt_launch_module;
+#X obj 162 332 s vt_launch_module;
+#X obj 160 384 s vt_launch_module;
+#X obj 481 334 s vt_launch_module;
+#X obj 217 185 bng 20 250 50 0 adhahjqrjqrj AETJAETJAETJQTEJ vt_pattern_sample_4drums
+24 10 0 12 -262144 -1 -1;
+#X obj 307 436 s vt_launch_module;
+#X msg 307 412 vt_pattern_sample_4drums 95;
+#X obj 217 162 bng 20 250 50 0 adhahjqrjqrj AETJAETJAETJQTEJ vt_audio_loop
+24 10 0 12 -262144 -1 -1;
+#X obj 310 380 s vt_launch_module;
+#X msg 310 359 vt_audio_loop 95;
+#X connect 0 0 15 0;
+#X connect 1 0 13 0;
+#X connect 2 0 11 0;
+#X connect 3 0 17 0;
+#X connect 8 0 12 0;
+#X connect 9 0 14 0;
+#X connect 11 0 22 0;
+#X connect 12 0 18 0;
+#X connect 13 0 21 0;
+#X connect 14 0 16 0;
+#X connect 15 0 20 0;
+#X connect 17 0 19 0;
+#X connect 23 0 25 0;
+#X connect 25 0 24 0;
+#X connect 26 0 28 0;
+#X connect 28 0 27 0;
+#X coords 0 -1 1 1 500 150 2 100 100;
