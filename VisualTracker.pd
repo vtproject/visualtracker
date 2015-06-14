@@ -1,5 +1,5 @@
 #N canvas 84 211 596 394 10;
-#N canvas 1454 147 168 459 program 1;
+#N canvas 1454 147 168 459 program 0;
 #N canvas 503 263 832 403 colortable 0;
 #X floatatom 567 147 5 0 0 0 - - -;
 #X floatatom 456 146 15 0 0 0 - - -;
@@ -1229,7 +1229,7 @@ Creative Commons GNU GPL \; \; > http://creativecommons.org/licenses/GPL/2.0/
 #X msg 11 87 Contributors: \; Ales Cerny (contactcaucasian//gmail.com)
 Berenger Recoules (berenger.recoules//gmail.com);
 #X restore 286 77 pd credits;
-#N canvas 591 45 531 177 library 1;
+#N canvas 591 45 531 177 library 0;
 #X obj 5 -36 modules/vt_module_launcher;
 #X restore 101 32 pd library;
 #N canvas 104 301 380 103 controls 0;
@@ -1377,8 +1377,8 @@ enable -40 7 0 10 -262144 -1 -1 0 1;
 0 -8 0 10 -262144 -1 -1 35 256;
 #X obj 16017 1035 nbx 3 14 0 1000 0 1 empty vt_settracknumber empty
 0 -8 0 10 -262144 -1 -1 36 256;
-#X obj 168 0 cnv 1 184 1080 empty vt_to_selection_canvas empty 20 12
-0 14 -262144 -262144 0;
+#X obj 0 0 cnv 1 16 1080 empty vt_to_selection_canvas empty 20 12 0
+14 -262144 -262144 0;
 #X obj 844 1180 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
 -66577 0;
 #X obj 844 1251 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
@@ -5469,9 +5469,9 @@ enable -40 7 0 10 -262144 -1 -1 0 1;
 #X obj -1 -9 cnv 8 16000 8 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X obj 0 -19 hsl 16000 8 0 16000 0 0 vt_from_selection_slider1 vt_to_selection_slider1
-empty -2 -8 0 10 -262144 -1 -1 16799 1;
+empty -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 0 -11 hsl 16000 8 0 16000 0 0 vt_from_selection_slider2 vt_to_selection_slider2
-empty -2 -8 0 10 -262144 -1 -1 35198 1;
+empty -2 -8 0 10 -262144 -1 -1 1600 1;
 #X obj -2 -37 cnv 1 1 37 empty empty empty 20 12 0 14 -1 -66577 0;
 #X obj -3 -36 cnv 1 1 1115 empty vt_to_sequence_cursor empty 20 12
 0 14 -262144 -262144 0;
@@ -5860,7 +5860,7 @@ track output.;
 #X obj -142 689 hsl 75 8 0 16000 0 1 nosend noreceive empty -2 -8 0
 10 -262144 -1 -1 3900 1;
 #X obj -142 697 hsl 75 8 0 16000 0 0 vt_from_selection_slider2 vt_to_selection_slider2
-empty -2 -8 0 10 -262144 -1 -1 163 1;
+empty -2 -8 0 10 -262144 -1 -1 7 1;
 #X text -145 661 O;
 #X text -71 661 1;
 #X obj -136 715 cnv 8 49 26 empty empty line(1) 3 13 0 10 -260818 -1
@@ -5884,7 +5884,7 @@ routes the module output to particular track output.;
 #X restore 0 -198 pd timeline_GUI_help;
 #X obj 213 512 cnv 15 497 25 empty empty To_see_whole_GUI_move_the_window_sliders_far_left_and_far_up
 10 12 0 14 -162280 -262144 0;
-#X obj -1 0 lazarchik/timeline \$0;
+#X obj -1 0 abs/timeline \$0;
 #X connect 0 0 2078 0;
 #X connect 1 0 2079 0;
 #X connect 2 0 2080 0;
@@ -5923,7 +5923,7 @@ routes the module output to particular track output.;
 #X connect 83 0 2077 0;
 #X connect 2067 0 2068 0;
 #X restore 102 -22 pd timeline;
-#N canvas 317 318 441 623 modules 1;
+#N canvas 317 318 441 623 modules 0;
 #X restore 286 56 pd modules;
 #N canvas 262 369 385 264 storage 0;
 #X obj 156 114 bng 15 250 50 0 vt_delete_modules HJNetjrEJTRetjrET
