@@ -2,7 +2,7 @@ VisualTracker 1 BETA 3 build 130203
 
 Unreleased
 
-More info: https://github.com/lazarchik/visualtracker/wiki/Documentation
+More info: https://github.com/vtproject/visualtracker/wiki/Documentation
 
 License: www.gnu.org/licenses/gpl.html
 
