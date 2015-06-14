@@ -2,14 +2,14 @@
 #X text 490 482 More info code.google.com/p/visualtracker;
 #X obj 1 121 cnv 15 408 95 empty \$0-background vt_template_module
 5 8 1 12 -233017 -1 0;
-#X obj 184 199 nbx 3 14 1 1e+037 0 0 \$0-from_gop_bars \$0-to_gop_bars
+#X obj 184 199 nbx 3 14 1 1e+37 0 0 \$0-from_gop_bars \$0-to_gop_bars
 bars: -25 7 1 10 -262144 -1 -1 1 256;
-#X obj 316 199 nbx 3 14 1 1e+037 0 0 \$0-from_gop_multi \$0-to_gop_multi
+#X obj 316 199 nbx 3 14 1 1e+37 0 0 \$0-from_gop_multi \$0-to_gop_multi
 multi: -30 7 1 10 -262144 -1 -1 1 256;
 #X obj 188 124 nbx 3 14 0 19 0 0 \$0-from_gop_color \$0-to_gop_color
 color: -28 7 1 10 -262144 -1 -1 0 256;
-#X obj 360 124 nbx 4 14 1 1e+037 0 0 \$0-from_gop_module_ID \$0-to_gop_module_ID
-module_ID: -57 7 1 10 -233017 -1 -1 245 256;
+#X obj 360 124 nbx 4 14 1 1e+37 0 0 \$0-from_gop_module_ID \$0-to_gop_module_ID
+module_ID: -57 7 1 10 -233017 -1 -1 2 256;
 #N canvas 68 375 923 423 hide_numbers 0;
 #X obj 41 309 pack f f;
 #X obj 41 251 t b f;
@@ -97,7 +97,7 @@ module section.;
 #X obj 388 199 bng 15 250 50 0 \$0-from_gop_play \$0-to_gop_play exe:
 -22 7 1 10 -262144 -1 -1;
 #X obj 276 -36 r vt_seq_stop;
-#X obj 226 199 nbx 5 14 1 1e+037 0 0 \$0-from_gop_percentage \$0-to_gop_percentage
+#X obj 226 199 nbx 5 14 1 1e+37 0 0 \$0-from_gop_percentage \$0-to_gop_percentage
 empty -7 7 1 10 -233017 -1 -1 100 256;
 #N canvas 818 109 411 255 percentage 0;
 #X obj 183 -12 * 100;
@@ -114,13 +114,13 @@ empty -7 7 1 10 -233017 -1 -1 100 256;
 #X connect 5 1 4 1;
 #X restore 137 349 pd percentage;
 #X symbolatom 4 140 66 0 0 0 - #0-to_gop_name #0-from_gop_name;
-#X obj 263 124 nbx 3 14 0 1e+037 0 0 \$0-from_gop_output \$0-to_gop_output
+#X obj 263 124 nbx 3 14 0 1e+37 0 0 \$0-from_gop_output \$0-to_gop_output
 output: -34 7 1 10 -233017 -1 -1 0 256;
 #X obj 136 162 vradio 17 1 0 3 \$0-from_gop_fit \$0-to_gop_fit fit:
 -15 7 1 10 -262144 -1 -1 0;
-#X obj 226 180 nbx 3 14 1 1e+037 0 0 \$0-from_gop_original_bpm \$0-to_gop_original_bpm
+#X obj 226 180 nbx 3 14 1 1e+37 0 0 \$0-from_gop_original_bpm \$0-to_gop_original_bpm
 original_bpm: -67 7 1 10 -262144 -1 -1 100 256;
-#X obj 263 180 nbx 5 14 1 1e+037 0 0 \$0-from_gop_percentage \$0-to_gop_percentage
+#X obj 263 180 nbx 5 14 1 1e+37 0 0 \$0-from_gop_percentage \$0-to_gop_percentage
 empty -7 7 1 10 -233017 -1 -1 100 256;
 #X text 157 161 no;
 #X text 312 180 %;
@@ -213,7 +213,7 @@ it to predefined sends and receives to integrate features of VisualTracker
 enviroment.;
 #X text 3 219 note some controls are hidden by cover canvases;
 #X text 292 220 > click "fit radio";
-#X obj 278 162 nbx 3 14 1 1e+037 0 0 \$0-from_gop_orig_duration \$0-to_gop_orig_duration
+#X obj 278 162 nbx 3 14 1 1e+37 0 0 \$0-from_gop_orig_duration \$0-to_gop_orig_duration
 original_duration: -85 7 1 10 -262144 -1 -1 5 256;
 #X text 312 161 [sec];
 #X obj 281 257 r \$0-from_gop_orig_duration;
@@ -226,7 +226,6 @@ original_duration: -85 7 1 10 -262144 -1 -1 5 256;
 #X obj 281 389 r \$0-from_gop_original_bpm;
 #X obj 152 327 r \$0-ORIG_DURATION;
 #X text -2 480 Compatibility: VisualTracker 1 BETA;
-#X obj 83 92 ../abs/visualtracker_connector \$0;
 #X obj 505 -72 ../abs/mstorage \$0 1 \$1 number -2;
 #X obj 504 -8 ../abs/mstorage \$0 2 \$2 number 0;
 #X obj 504 57 ../abs/mstorage \$0 3 \$3 symbol 0 no_name;
@@ -238,12 +237,13 @@ original_duration: -85 7 1 10 -262144 -1 -1 5 256;
 #X obj 506 436 ../abs/mstorage \$0 9 \$9 number 5;
 #X msg 143 47 modules/vt_template_module;
 #X text 309 46 path/filename;
+#X obj 83 92 ../abs/visualtracker_connector \$0;
 #X connect 10 0 45 0;
-#X connect 22 0 94 0;
+#X connect 22 0 93 0;
 #X connect 23 0 40 0;
 #X connect 24 0 39 0;
 #X connect 25 0 38 0;
-#X connect 26 0 95 0;
+#X connect 26 0 94 0;
 #X connect 27 0 21 0;
 #X connect 41 0 29 0;
 #X connect 42 0 10 0;
@@ -251,30 +251,30 @@ original_duration: -85 7 1 10 -262144 -1 -1 5 256;
 #X connect 49 0 6 0;
 #X connect 50 0 36 0;
 #X connect 51 0 30 0;
-#X connect 52 0 98 0;
-#X connect 54 0 97 0;
-#X connect 56 0 100 0;
-#X connect 58 0 99 0;
-#X connect 60 0 101 0;
+#X connect 52 0 97 0;
+#X connect 54 0 96 0;
+#X connect 56 0 99 0;
+#X connect 58 0 98 0;
+#X connect 60 0 100 0;
 #X connect 61 0 37 0;
-#X connect 68 0 96 0;
+#X connect 68 0 95 0;
 #X connect 72 0 73 0;
-#X connect 74 0 103 0;
+#X connect 74 0 102 0;
 #X connect 74 0 72 0;
 #X connect 83 0 85 0;
 #X connect 84 0 48 0;
 #X connect 85 0 34 0;
-#X connect 88 0 102 0;
+#X connect 88 0 101 0;
 #X connect 90 0 89 0;
 #X connect 91 0 10 1;
-#X connect 94 0 31 0;
-#X connect 95 0 28 0;
-#X connect 96 0 44 0;
-#X connect 97 0 55 0;
-#X connect 98 0 53 0;
-#X connect 99 0 59 0;
-#X connect 100 0 57 0;
-#X connect 101 0 87 0;
-#X connect 102 0 86 0;
-#X connect 103 0 75 0;
+#X connect 93 0 31 0;
+#X connect 94 0 28 0;
+#X connect 95 0 44 0;
+#X connect 96 0 55 0;
+#X connect 97 0 53 0;
+#X connect 98 0 59 0;
+#X connect 99 0 57 0;
+#X connect 100 0 87 0;
+#X connect 101 0 86 0;
+#X connect 102 0 75 0;
 #X coords 0 -1 1 1 410 97 2 0 120;
