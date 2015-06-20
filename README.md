@@ -13,16 +13,4 @@ Contact:
 
 To run VisualTracker you need Pure Data software installed on your computer (www.puredata.info), version 0.43.1-extended
 
-issues:
-
-TODO:
-
-- loading window appearance
-
-DONE:
-
-- REGION/LOOP/SEL saved with composition
-- timeline help
-- module sequencer including template controls
-- time signature
 
