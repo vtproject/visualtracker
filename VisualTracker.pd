@@ -1,30 +1,30 @@
 #N canvas 426 213 596 394 10;
 #N canvas 14 147 170 524 program 0;
-#N canvas 347 114 717 348 colortable 0;
-#X floatatom 470 -11 5 0 0 0 - - -;
-#X floatatom 359 -12 15 0 0 0 - - -;
+#N canvas 564 53 1056 813 colortable 0;
+#X floatatom 400 -65 5 0 0 0 - - -;
+#X floatatom 550 28 15 0 0 0 - - -;
 #N canvas 0 22 495 251 (subpatch) 0;
 #X array colortable 20 float 3;
-#A 0 -1.51324e+007 -1.34286e+007 -1.22857e+007 -1.14286e+007 -1.05714e+007
--9.85714e+006 -8.71429e+006 -8.14285e+006 -7.42858e+006 -6.85713e+006
--5.85713e+006 -5.14284e+006 -4.57141e+006 -3.71393e+006 -2.91108e+006
--2.349e+006 -1.57912e+006 -1.27517e+006 -575691 -53461;
-#X coords 0 -1 20 -2e+007 200 140 1 0 0;
+#A 0 -1.11848e+07 -65281 -1.67624e+07 -1.67483e+07 -65536 -1.6777e+07
+-1.67482e+07 -9.34272e+06 -1.67625e+07 -1.30127e+07 -9.35706e+06 -1.67771e+07
+-1.67554e+07 -1.12066e+07 -1.12067e+07 -1.67117e+07 -9.3353e+06 -1.12065e+07
+-1.6777e+07 -1.67335e+07;
+#X coords 0 -1 20 -2e+07 200 140 1 0 0;
 #X restore 24 -104 graph;
-#X text 505 -12 color number;
-#X floatatom 550 73 20 0 0 0 - - -;
-#X floatatom 550 28 5 0 19 0 - - -;
+#X text 384 -91 color number;
+#X floatatom 564 302 20 0 0 0 - - -;
+#X floatatom 564 257 5 0 19 0 - - -;
 #X obj 81 114 cnv 15 100 60 empty vt_colortablecanvas TEXT_text 20
-30 0 10 -3382 -1 0;
-#X msg 302 124 \; vt_colortablecanvas color \$1 22;
-#X obj 359 28 tabwrite colortable;
-#X obj 550 49 tabread colortable;
-#X floatatom 332 -88 3 0 255 0 - - -;
-#X floatatom 375 -88 3 0 255 0 - - -;
-#X floatatom 418 -87 3 0 255 0 - - -;
-#X text 332 -106 red;
-#X text 368 -107 green;
-#X text 416 -107 blue;
+30 0 10 -259414 -1 0;
+#X msg 483 353 \; vt_colortablecanvas color \$1 22;
+#X obj 550 137 tabwrite colortable;
+#X obj 564 278 tabread colortable;
+#X floatatom 523 -75 3 0 255 0 - - -;
+#X floatatom 566 -75 3 0 255 0 - - -;
+#X floatatom 609 -74 3 0 255 0 - - -;
+#X text 523 -93 red;
+#X text 559 -94 green;
+#X text 607 -94 blue;
 #N canvas 445 58 606 448 RGB 0;
 #X obj 262 53 inlet;
 #X obj 339 55 inlet;
@@ -54,8 +54,21 @@
 #X connect 12 0 7 0;
 #X connect 13 0 6 0;
 #X connect 14 0 10 0;
-#X restore 359 -53 pd RGB;
+#X restore 550 -40 pd RGB;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$0-datastructure-colors 20 float 1;
+#A 0 666 90 970 959 99 990 955 559 975 759 579 995 968 696 699 900
+549 695 993 933;
+#X coords 0 0 19 999 200 140 1 0 0;
+#X restore 682 -94 graph;
+#X obj 259 139 tabwrite \$0-datastructure-colors;
+#X floatatom 259 -71 5 0 0 0 - - -;
+#X text 238 -92 data structure color;
+#X floatatom 90 218 5 0 0 0 - - -;
+#X floatatom 90 275 5 0 0 0 - - -;
+#X obj 90 246 tabread \$0-datastructure-colors;
 #X connect 0 0 8 1;
+#X connect 0 0 18 1;
 #X connect 1 0 7 0;
 #X connect 1 0 8 0;
 #X connect 4 0 7 0;
@@ -65,6 +78,9 @@
 #X connect 11 0 16 1;
 #X connect 12 0 16 2;
 #X connect 16 0 1 0;
+#X connect 19 0 18 0;
+#X connect 21 0 23 0;
+#X connect 23 0 22 0;
 #X restore -13 79 pd colortable;
 #N canvas 478 140 1017 678 sequencer 0;
 #X text 393 33 played region;
@@ -1171,7 +1187,7 @@ SELECTION 17 7 1 10 -262144 -1 -1 0 1;
 17 7 1 10 -262144 -1 -1 0 1;
 #X obj 44 88 tgl 11 0 vt_shortcuts_enable oijsdpoihjwrpiuzruzpr shortcuts
 15 7 0 10 -262144 -1 -1 0 1;
-#X obj -243 -16 nbx 5 15 -1e+037 1e+037 0 0 vt_from_bpm vt_to_bpm SET_BPM
+#X obj -243 -16 nbx 5 15 -1e+37 1e+37 0 0 vt_from_bpm vt_to_bpm SET_BPM
 60 8 0 10 -262144 -1 -1 0 256;
 #X obj -243 5 change;
 #X obj -120 5 change;
@@ -1343,7 +1359,7 @@ enable -40 7 0 10 -262144 -1 -1 0 1;
 #X obj 479 699 r data10;
 #X obj 501 742 r data11;
 #X obj 528 785 r data12;
-#N canvas 267 210 907 667 timeline 0;
+#N canvas 701 232 907 667 timeline 1;
 #X obj 16017 15 nbx 3 14 0 1000 0 1 empty vt_settracknumber empty 0
 -8 0 10 -262144 -1 -1 2 256;
 #X obj 16017 45 nbx 3 14 0 1000 0 1 empty vt_settracknumber empty 0
@@ -6004,7 +6020,7 @@ routes the module output to particular track output.;
 #X connect 83 0 2077 0;
 #X connect 2067 0 2068 0;
 #X restore 102 -22 pd timeline;
-#N canvas 278 140 441 623 modules 0;
+#N canvas 173 288 441 623 modules 0;
 #X restore 286 56 pd modules;
 #N canvas 262 369 385 264 storage 0;
 #X obj 156 114 bng 15 250 50 0 vt_delete_modules HJNetjrEJTRetjrET
