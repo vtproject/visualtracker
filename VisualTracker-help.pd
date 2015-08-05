@@ -1,4 +1,4 @@
-#N canvas 599 64 549 598 10;
+#N canvas 185 60 549 598 10;
 #X obj 127 258 VisualTracker;
 #X msg 223 411 MUTE;
 #X obj 194 383 loadbang;

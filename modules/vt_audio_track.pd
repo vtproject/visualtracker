@@ -1,12 +1,12 @@
 #N canvas 140 29 1220 672 10;
 #X text 906 507 More info code.google.com/p/visualtracker;
 #X obj 1 121 cnv 15 408 95 empty \$0-background vt_audio_track 5 8
-1 12 -24198 -1 0;
+1 12 -233017 -1 0;
 #X symbolatom 522 31 10 0 0 0 - - -;
 #X obj 188 124 nbx 3 14 0 19 0 0 \$0-from_gop_color \$0-to_gop_color
-color: -28 7 1 10 -262144 -1 -1 1 256;
-#X obj 360 124 nbx 4 14 1 1e+037 0 0 \$0-from_gop_module_ID \$0-to_gop_module_ID
-module_ID: -57 7 1 10 -24198 -1 -1 2 256;
+color: -28 7 1 10 -262144 -1 -1 0 256;
+#X obj 360 124 nbx 4 14 1 1e+37 0 0 \$0-from_gop_module_ID \$0-to_gop_module_ID
+module_ID: -57 7 1 10 -233017 -1 -1 5 256;
 #X obj 388 193 bng 15 250 50 0 \$0-from_gop_play \$0-to_gop_play play:
 -25 7 1 10 -262144 -1 -1;
 #X obj 603 318 r vt_seq_stop;
@@ -33,7 +33,7 @@ unload 18 7 1 10 -262144 -1 -1;
 #X obj 104 202 outlet~;
 #X obj 249 -135 inlet stop;
 #X obj 159 202 outlet~;
-#X obj 105 174 readsf~ 2 1e+006;
+#X obj 105 174 readsf~ 2 1e+06;
 #X obj -65 -135 inlet filename;
 #X msg 28 132 start;
 #X msg 105 130 stop;
@@ -186,7 +186,7 @@ unload 18 7 1 10 -262144 -1 -1;
 #X connect 10 0 0 0;
 #X connect 12 0 1 0;
 #X restore 249 274 pd unload_action;
-#N canvas 0 0 450 300 original_duration 0;
+#N canvas 0 22 450 300 original_duration 0;
 #X obj 174 -78 / 44.1;
 #X obj 174 -134 inlet array size;
 #X text 78 -78 samplerate / ms;
@@ -195,9 +195,9 @@ unload 18 7 1 10 -262144 -1 -1;
 #X connect 1 0 0 0;
 #X restore 670 153 pd original_duration;
 #X symbolatom 4 140 66 0 0 0 - #0-to_gop_name #0-from_gop_name;
-#X obj 263 124 nbx 3 14 0 1e+037 0 0 \$0-from_gop_output \$0-to_gop_output
-output: -34 7 1 10 -24198 -1 -1 1 256;
-#X obj 47 192 nbx 4 14 -100 1e+037 0 0 \$0-from_gop_gain \$0-to_gop_gain
+#X obj 263 124 nbx 3 14 0 1e+37 0 0 \$0-from_gop_output \$0-to_gop_output
+output: -34 7 1 10 -233017 -1 -1 0 256;
+#X obj 47 192 nbx 4 14 -100 1e+37 0 0 \$0-from_gop_gain \$0-to_gop_gain
 gain+: -30 7 1 10 -262144 -1 -1 0 256;
 #N canvas 336 71 450 300 gain 0;
 #X obj 18 15 inlet~ audio stream;
@@ -219,8 +219,8 @@ gain+: -30 7 1 10 -262144 -1 -1 0 256;
 #X connect 8 0 2 0;
 #X restore 542 418 pd gain;
 #X text 90 191 %;
-#X obj 146 192 nbx 6 14 -1e+006 1e+037 0 0 \$0-from_gop_offset \$0-to_gop_offset
-offset: -30 7 1 10 -262144 -1 -1 -2000 256;
+#X obj 146 192 nbx 6 14 -1e+06 1e+37 0 0 \$0-from_gop_offset \$0-to_gop_offset
+offset: -30 7 1 10 -262144 -1 -1 0 256;
 #X text 202 192 [ms];
 #N canvas 584 57 468 352 module_colors 0;
 #X obj 134 126 pack f f;
@@ -283,8 +283,8 @@ merge_channels: -82 8 1 10 -262144 -1 -1 0 1;
 #X obj 946 180 r \$0-from_gop_gain;
 #X obj 946 218 s \$0-to_gop_gain;
 #X obj 291 363 s \$0-to_gop_name;
-#X obj 263 162 nbx 3 14 0 1e+037 0 0 adfasdfsadf \$0-to_gop_trackchannels
-track_channels: -72 7 1 10 -24198 -1 -1 2 256;
+#X obj 263 162 nbx 3 14 0 1e+37 0 0 adfasdfsadf \$0-to_gop_trackchannels
+track_channels: -72 7 1 10 -233017 -1 -1 0 256;
 #X obj 603 113 s \$0-to_gop_trackchannels;
 #X obj 295 308 s \$0-to_gop_trackchannels;
 #N canvas 336 71 450 300 stereo2mono 0;
@@ -318,7 +318,6 @@ track_channels: -72 7 1 10 -24198 -1 -1 2 256;
 #X obj 60 71 s \$0-GOP_SIZE;
 #X obj 112 22 r \$0-CREATIONBANG;
 #X obj 148 71 s \$0-MODULE_FILENAME;
-#X obj 72 94 ../abs/visualtracker_connector \$0;
 #X text 292 46 path/filename;
 #X obj 946 199 ../abs/mstorage \$0 6 \$6 number 0;
 #X obj 947 260 ../abs/mstorage \$0 7 \$7 number 0;
@@ -328,6 +327,7 @@ track_channels: -72 7 1 10 -24198 -1 -1 2 256;
 #X obj 0 343 s \$0-MULTI;
 #X obj 0 299 r \$0-CREATIONBANG;
 #X msg 0 321 1;
+#X obj 72 94 ../abs/visualtracker_connector \$0;
 #X connect 2 0 11 0;
 #X connect 2 0 42 0;
 #X connect 2 0 77 0;
@@ -365,10 +365,10 @@ track_channels: -72 7 1 10 -24198 -1 -1 2 256;
 #X connect 47 0 13 0;
 #X connect 52 0 79 0;
 #X connect 54 0 78 0;
-#X connect 56 0 89 0;
-#X connect 58 0 90 0;
+#X connect 56 0 88 0;
+#X connect 58 0 89 0;
 #X connect 60 0 35 0;
-#X connect 62 0 88 0;
+#X connect 62 0 87 0;
 #X connect 68 0 32 0;
 #X connect 68 1 33 0;
 #X connect 75 0 31 0;
@@ -377,12 +377,12 @@ track_channels: -72 7 1 10 -24198 -1 -1 2 256;
 #X connect 78 0 55 0;
 #X connect 79 0 53 0;
 #X connect 82 0 83 0;
-#X connect 84 0 92 0;
+#X connect 84 0 91 0;
 #X connect 84 0 82 0;
-#X connect 88 0 63 0;
-#X connect 89 0 57 0;
-#X connect 90 0 59 0;
-#X connect 92 0 85 0;
-#X connect 94 0 95 0;
-#X connect 95 0 93 0;
+#X connect 87 0 63 0;
+#X connect 88 0 57 0;
+#X connect 89 0 59 0;
+#X connect 91 0 85 0;
+#X connect 93 0 94 0;
+#X connect 94 0 92 0;
 #X coords 0 -1 1 1 410 97 2 0 120;

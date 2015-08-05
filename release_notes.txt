@@ -1,0 +1,5 @@
+15-06-20
+- drag-n-drop data strustures implementation
+
+15-07-12
+-color table RGB modification
